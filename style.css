@@ -1,0 +1,796 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 18px;
+}
+
+#mainContainer {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid black; */
+}
+
+#container1 {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid black; */
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    padding: 20px 0;
+}
+
+nav {
+    width: 95%;
+    height: auto;
+    /* border: 2px solid black; */
+    /* background-color: white; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 6%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+nav ul a {
+    width: auto;
+    text-decoration: none;
+    color: #1F305E;
+    border: 2px solid transparent;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+nav ul a:hover {
+    /* font-weight: 600; */
+    border-bottom: 2px solid #1F305E;
+    padding-bottom: 10px;
+}
+
+#icons {
+    width: 10%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#email,
+#phone {
+    width: 35px;
+    height: 35px;
+    background-color: #1F305E;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email,
+.phone {
+    width: 70%;
+}
+
+#box1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgb(41, 41, 41);
+    position: relative;
+}
+
+#text {
+    width: 60%;
+    height: auto;
+    /* border: 2px solid white; */
+    position: absolute;
+    z-index: 1;
+    animation: text 0.8s ease-in-out;
+}
+
+@keyframes text {
+    0% {
+        margin-top: 100px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+.heading {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.para {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+#slider {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider .slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: fade 30s infinite;
+    opacity: 0;
+    object-fit: cover;
+}
+
+#slider .slider1 {
+    animation-delay: 0s;
+}
+
+#slider .slider2 {
+    animation-delay: 6s;
+}
+
+#slider .slider3 {
+    animation-delay: 12s;
+}
+
+#slider .slider4 {
+    animation-delay: 18s;
+}
+
+#slider .slider5 {
+    animation-delay: 24s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0.4;
+    }
+
+    20% {
+        opacity: 0.4;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+#productContainer {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #ffffff;
+}
+
+#productHeading {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+}
+
+#productHeading h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#productBox {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
+
+.products {
+    height: 350px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(154, 154, 154);
+    overflow: hidden;
+    margin: 30px 0;
+    animation: products 2s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+@keyframes products {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.products:hover {
+    scale: 1.1;
+}
+
+.imgBox {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgBox img {
+    width: 250px;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.title p {
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+
+
+
+#aboutContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px black;
+}
+
+#bgImage {
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/backgrounds/image2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    filter: blur(3px);
+}
+
+#section2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 1;
+}
+
+#aboutHeading {
+    width: 100%;
+    height: auto;
+    animation: heading 1s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+@keyframes heading {
+    0% {
+        opacity: 0;
+        transform: translatey(-50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#aboutHeading h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 30px 0;
+    color: white;
+}
+
+#aboutPopUp {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    padding: 20px;
+    animation: popup 1s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: translatex(-50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#aboutText h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    color: rgb(44, 44, 44);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#aboutText h1 span {
+    color: #024c95;
+}
+
+#aboutText p {
+    width: 100%;
+    color: rgb(94, 94, 94);
+    margin: 15px 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+
+
+#servicesContainer {
+    width: 100%;
+    height: auto;
+}
+
+#servicesHeading {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    animation: servicesHeading 1s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+@keyframes servicesHeading {
+    0% {
+        opacity: 0;
+        transform: translatey(-50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+#servicesHeading h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#servicesBox {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
+
+.services {
+    min-height: 380px;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(154, 154, 154);
+    overflow: hidden;
+    margin: 30px 0;
+    animation: services 2s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+@keyframes services {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.services:hover{
+    scale: 1.1;
+}
+.servicesImg {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.servicesImg img{
+    width: 400px;
+}
+.servicesText{
+    width: 100%;
+    min-height: 180px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 10px 0;
+
+}
+.servicesText h3{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 5px 0;
+}
+.servicesText p{
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    margin: 5px 0;
+}
+
+
+#contactContainer{
+    width: 100%;
+    height: auto;
+    background-image: url("./images/backgrounds/contact\ background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 20px black;
+}
+#contact{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+#contactHeading{
+    width: 100%;
+    padding: 20px 0;
+}
+#contactHeading h1{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+#contactBox{
+    width: 65%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+#contactPhone, #contactEmail{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 20px;
+    gap: 10px;
+    color: #1F305E;
+    font-size: 1rem;
+    box-shadow: 0 0 10px black;
+}
+#contactPhone:hover, #contactEmail:hover{
+    scale: 1.1;
+}
+#contactPhone img, #contactEmail img{
+    width: 15%;
+    background-color: #1F305E;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+
+footer{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    z-index: -1;
+}
+footer p{
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
+
+@media only screen and (max-width: 576px) {
+    #logo {
+        width: 10%;
+    }
+    nav ul {
+        width: 60%;
+    }
+    nav ul a {
+        font-size: 0.5rem;
+    }
+    #icons {
+        width: 16%;
+    }
+    #email,
+    #phone {
+        width: 22px;
+        height: 22px;
+    }
+    .email,
+    .phone {
+        width: 60%;
+    }
+
+
+    #text {
+        width: 80%;
+    }
+    .heading {
+        font-size: 1.7rem;
+    }
+    .para {
+        font-size: 0.7rem;
+    }
+
+
+    #productBox {
+        grid-template-columns: 70%;
+        justify-content: center;
+    }
+    .imgBox img {
+        width: 220px;
+    }
+    .title p {
+        font-size: 0.8rem;
+    }
+
+
+    #aboutPopUp {
+        width: 80%;
+    }
+    #aboutText h1 {
+        font-size: 1.8rem;
+    }
+    #aboutText p {
+        font-size: 0.7rem;
+    }
+
+
+    #servicesBox {
+        grid-template-columns: 70%;
+        justify-content: center;
+    }
+
+
+    #contactBox{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    #contactPhone, #contactEmail{
+        font-size: 0.6rem;
+    }
+
+
+    footer p{
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #logo {
+        width: 10%;
+    }
+    nav ul {
+        width: 60%;
+    }
+    nav ul a {
+        font-size: 0.7rem;
+    }
+    #icons {
+        width: 14%;
+    }
+    #email,
+    #phone {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    #text {
+        width: 70%;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .para {
+        font-size: 0.9rem;
+    }
+
+
+    #productBox {
+        grid-template-columns: 40% 40%;
+        justify-content: space-evenly;
+    }
+    .imgBox img {
+        width: 230px;
+    }
+    .title p {
+        font-size: 0.9rem;
+    }
+
+
+    #aboutPopUp {
+        width: 70%;
+    }
+    #aboutText h1 {
+        font-size: 2.2rem;
+    }
+    #aboutText p {
+        font-size: 0.8rem;
+    }
+
+
+    #servicesBox {
+        grid-template-columns: 40% 40%;
+        justify-content: space-evenly;
+    }
+    .servicesText h3{
+        font-size: 1rem;
+    }
+    .servicesText p{
+        font-size: 0.6rem;
+    }
+
+
+    #contactBox{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+
+    footer p{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    #logo {
+        width: 10%;
+    }
+    nav ul {
+        width: 50%;
+    }
+    nav ul a {
+        font-size: 0.8rem;
+    }
+    #icons {
+        width: 12%;
+    }
+
+
+    #text {
+        width: 65%;
+    }
+    .heading {
+        font-size: 2.4rem;
+    }
+    .para {
+        font-size: 1.2rem;
+    }
+
+
+    #productBox {
+        grid-template-columns: 45% 45%;
+        justify-content: space-evenly;
+    }
+    .imgBox img {
+        width: 240px;
+    }
+    .title p {
+        font-size: 0.9rem;
+    }
+
+
+    #aboutPopUp {
+        width: 60%;
+    }
+    #aboutText h1 {
+        font-size: 2.4rem;
+    }
+
+
+    #servicesBox {
+        grid-template-columns: 45% 45%;
+        justify-content: space-evenly;
+    }
+    .servicesText h3{
+        font-size: 1.1rem;
+    }
+    .servicesText p{
+        font-size: 0.7rem;
+    }
+
+
+    #contactBox{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #logo {
+        width: 8%;
+    }
+    nav ul {
+        width: 45%;
+    }
+}
