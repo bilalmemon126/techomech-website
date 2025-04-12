@@ -12,13 +12,11 @@ html {
 #mainContainer {
     width: 100%;
     height: auto;
-    /* border: 2px solid black; */
 }
 
 #container1 {
     width: 100%;
     height: auto;
-    /* border: 2px solid black; */
 }
 
 
@@ -30,48 +28,39 @@ header {
     z-index: 10;
     padding: 20px 0;
 }
-
-nav {
+nav{
     width: 95%;
     height: auto;
-    /* border: 2px solid black; */
-    /* background-color: white; */
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-#logo {
-    width: 6%;
+#logoBox{
+    width: 200px;
 }
-
-nav ul {
+#logo{
+    width: 100%;
+}
+nav ul{
+    width: 45%;
     list-style-type: none;
     display: flex;
-    width: 40%;
+    align-items: center;
     justify-content: space-between;
-    /* border: 2px solid black; */
 }
-
-nav ul a {
-    width: auto;
+nav ul li a{
     text-decoration: none;
-    color: #1F305E;
-    border: 2px solid transparent;
-    padding: 10px 0;
-    font-size: 1rem;
+    color: #024C94;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+    font-size: 1.1rem;
 }
-
-nav ul a:hover {
-    /* font-weight: 600; */
-    border-bottom: 2px solid #1F305E;
-    padding-bottom: 10px;
+nav ul li a:hover{
+    border-bottom: 2px solid #024C94;
 }
-
 #icons {
     width: 10%;
-    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +70,7 @@ nav ul a:hover {
 #phone {
     width: 35px;
     height: 35px;
-    background-color: #1F305E;
+    background-color: #1E2F5D;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -92,6 +81,70 @@ nav ul a:hover {
 .phone {
     width: 70%;
 }
+
+#menuIcon{
+    display: none;
+    border-radius: 25px;
+}
+#menuIcon:hover{
+    background-color: #1E2F5D;
+}
+#menuIcon span{
+    color: #1E2F5D;
+    margin: 8px;
+}
+#menuIcon span:hover{
+    color: white;
+}
+
+.hide{
+    display: none !important;
+}
+
+#responsiveNav{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    animation: responsiveNav 1s forwards;
+    position: absolute;
+    z-index: 2;
+}
+@keyframes responsiveNav {
+    0%{
+        opacity: 0;
+        margin-top: -30%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0%;
+    }
+}
+#responsiveNav ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#responsiveNav ul li{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #e9ecef;
+    padding: 5px 0;
+}
+#responsiveNav ul li:hover{
+    border-bottom: 2px solid #024C94;
+}
+#responsiveNav ul li a{
+    text-decoration: none;
+    color: #024C94;
+}
+
+
+
 
 #box1 {
     width: 100%;
@@ -107,7 +160,6 @@ nav ul a:hover {
 #text {
     width: 60%;
     height: auto;
-    /* border: 2px solid white; */
     position: absolute;
     z-index: 1;
     animation: text 0.8s ease-in-out;
@@ -228,6 +280,9 @@ nav ul a:hover {
     grid-template-columns: 30% 30% 30%;
     justify-content: space-between;
 }
+#productBox a{
+    text-decoration: none;
+}
 
 .products {
     height: 350px;
@@ -263,10 +318,11 @@ nav ul a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .imgBox img {
-    width: 250px;
+    width: 100%;
 }
 
 .title {
@@ -274,8 +330,8 @@ nav ul a:hover {
     height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 10px;
     position: relative;
     z-index: 1;
@@ -284,6 +340,17 @@ nav ul a:hover {
 .title p {
     font-size: 1rem;
     color: white;
+    margin: 0;
+}
+
+#viewAll{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: gray;
 }
 
 
@@ -495,60 +562,75 @@ nav ul a:hover {
 }
 
 
+
+
 #contactContainer{
     width: 100%;
     height: auto;
-    background-image: url("./images/backgrounds/contact\ background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 0 0 20px black;
-}
-#contact{
-    width: 100%;
-    height: auto;
-    background-color: rgba(0,0,0,0.8);
-}
-#contactHeading{
-    width: 100%;
-    padding: 20px 0;
-}
-#contactHeading h1{
-    font-size: 2.5rem;
-    color: white;
-    text-align: center;
-}
-#contactBox{
-    width: 65%;
-    height: auto;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 48% 48%;
+    background-color: #1E2F5D;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
+    justify-content: center;
 }
-#contactPhone, #contactEmail{
-    padding: 10px;
+#contacts{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+#contactText{
+    width: 90%;
+    margin-left: 40px;
+    display: flex;
+    padding-right: 10px;
+    flex-direction: column;
+    gap: 30px;
+}
+#contactText h1{
+    color: white;
+    font-size: 2.5rem;
+}
+#contactText p{
+    font-size: 1rem;
+    color: white;
+}
+#contactIconBox{
+    width: 90%;
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+.callIcon, .contactEmailIcon{
+    width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: white;
-    border-radius: 20px;
-    gap: 10px;
-    color: #1F305E;
-    font-size: 1rem;
+    gap: 20px;
+}
+.callIcon span, .contactEmailIcon span{
+    color: white;
+    font-size: 2.5rem;
+}
+.callIcon p, .contactEmailIcon p{
+    color: white;
+    font-size: 1.2rem;
+}
+#contactImg{
+    width: 60%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 20px solid #1E2F5D;
     box-shadow: 0 0 10px black;
+    border-radius: 50px 0 0 50px;
 }
-#contactPhone:hover, #contactEmail:hover{
-    scale: 1.1;
-}
-#contactPhone img, #contactEmail img{
-    width: 15%;
-    background-color: #1F305E;
-    border-radius: 50px;
-    padding: 5px;
+#contactImg img{
+    width: 100%;
 }
 
 
@@ -568,26 +650,17 @@ footer p{
 
 
 @media only screen and (max-width: 576px) {
-    #logo {
-        width: 10%;
+    #logoBox{
+        width: 150px;
     }
-    nav ul {
-        width: 60%;
+    nav ul{
+        display: none;
     }
-    nav ul a {
-        font-size: 0.5rem;
+    #icons{
+        display: none;
     }
-    #icons {
-        width: 16%;
-    }
-    #email,
-    #phone {
-        width: 22px;
-        height: 22px;
-    }
-    .email,
-    .phone {
-        width: 60%;
+    #menuIcon{
+        display: block;
     }
 
 
@@ -605,9 +678,6 @@ footer p{
     #productBox {
         grid-template-columns: 70%;
         justify-content: center;
-    }
-    .imgBox img {
-        width: 220px;
     }
     .title p {
         font-size: 0.8rem;
@@ -631,14 +701,44 @@ footer p{
     }
 
 
-    #contactBox{
-        grid-template-columns: auto;
+    #contacts{
+        width: 95%;
+        justify-content: center;
+        padding: 50px 0;
+    }
+    #contactText{
+        width: 100%;
+        margin-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    #contactText h1{
+        font-size: 2rem;
+    }
+    #contactIconBox{
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .callIcon, .contactEmailIcon{
+        width: 100%;
         justify-content: center;
     }
-    #contactPhone, #contactEmail{
-        font-size: 0.6rem;
+    .callIcon span, .contactEmailIcon span{
+        font-size: 2rem;
     }
-
+    .callIcon p, .contactEmailIcon p{
+        font-size: 1rem;
+    }
+    #contactImg{
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+    }
+    #contactImg img{
+        width: 100%;
+    }
 
     footer p{
         font-size: 0.5rem;
@@ -646,22 +746,17 @@ footer p{
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    #logo {
-        width: 10%;
+    #logoBox{
+        width: 180px;
     }
-    nav ul {
-        width: 60%;
+    nav ul{
+        display: none;
     }
-    nav ul a {
-        font-size: 0.7rem;
+    #icons{
+        display: none;
     }
-    #icons {
-        width: 14%;
-    }
-    #email,
-    #phone {
-        width: 30px;
-        height: 30px;
+    #menuIcon{
+        display: block;
     }
 
 
@@ -679,9 +774,6 @@ footer p{
     #productBox {
         grid-template-columns: 40% 40%;
         justify-content: space-evenly;
-    }
-    .imgBox img {
-        width: 230px;
     }
     .title p {
         font-size: 0.9rem;
@@ -711,11 +803,34 @@ footer p{
     }
 
 
-    #contactBox{
-        grid-template-columns: auto;
+    #contacts{
+        width: 95%;
         justify-content: center;
+        padding: 50px 0;
     }
-
+    #contactText{
+        width: 100%;
+        margin-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    #contactIconBox{
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .callIcon, .contactEmailIcon{
+        width: auto;
+    }
+    #contactImg{
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+    }
+    #contactImg img{
+        width: 100%;
+    }
 
     footer p{
         font-size: 0.7rem;
@@ -723,17 +838,14 @@ footer p{
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
-    #logo {
-        width: 10%;
+    nav ul{
+        display: none;
     }
-    nav ul {
-        width: 50%;
+    #icons{
+        display: none;
     }
-    nav ul a {
-        font-size: 0.8rem;
-    }
-    #icons {
-        width: 12%;
+    #menuIcon{
+        display: block;
     }
 
 
@@ -751,9 +863,6 @@ footer p{
     #productBox {
         grid-template-columns: 45% 45%;
         justify-content: space-evenly;
-    }
-    .imgBox img {
-        width: 240px;
     }
     .title p {
         font-size: 0.9rem;
@@ -779,18 +888,41 @@ footer p{
         font-size: 0.7rem;
     }
 
-
-    #contactBox{
-        grid-template-columns: auto;
+    #contacts{
+        width: 95%;
         justify-content: center;
+        padding: 50px 0;
+    }
+    #contactText{
+        width: 100%;
+        margin-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    #contactIconBox{
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .callIcon, .contactEmailIcon{
+        width: auto;
+    }
+    #contactImg{
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+    }
+    #contactImg img{
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    #logo {
-        width: 8%;
+    #logoBox{
+        width: 180px;
     }
-    nav ul {
-        width: 45%;
+    nav ul{
+        width: 50%;
     }
 }
