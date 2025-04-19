@@ -330,23 +330,14 @@ nav ul li a:hover{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-}
-#contacts{
-    width: 40%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 50px;
+    justify-content: space-evenly;
+    padding: 30px 0;
 }
 #contactText{
-    width: 90%;
-    margin-left: 40px;
+    width: 40%;
     display: flex;
-    padding-right: 10px;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 #contactText h1{
     color: white;
@@ -357,15 +348,14 @@ nav ul li a:hover{
     color: white;
 }
 #contactIconBox{
-    width: 90%;
-    margin-left: 40px;
+    width: 40%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
+    align-items: end;
 }
 .callIcon, .contactEmailIcon{
-    width: 80%;
+    width: 60%;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -377,18 +367,6 @@ nav ul li a:hover{
 .callIcon p, .contactEmailIcon p{
     color: white;
     font-size: 1.2rem;
-}
-#contactImg{
-    width: 60%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border: 20px solid #1E2F5D;
-    box-shadow: 0 0 10px black;
-    border-radius: 50px 0 0 50px;
-}
-#contactImg img{
-    width: 100%;
 }
 
 
@@ -435,26 +413,21 @@ footer p{
 
 
 
-    #contacts{
-        width: 95%;
-        justify-content: center;
-        padding: 50px 0;
-    }
     #contactText{
-        width: 100%;
-        margin-left: 0px;
-        padding-right: 0px;
-        text-align: center;
+        width: 90%;
+        align-items: center;
+        margin-bottom: 50px;
     }
     #contactText h1{
         font-size: 2rem;
     }
+    #contactText p{
+        font-size: 0.8rem;
+        text-align: center;
+    }
     #contactIconBox{
-        width: 100%;
-        margin-left: 0px;
-        flex-direction: row;
+        width: 90%;
         align-items: center;
-        justify-content: space-evenly;
     }
     .callIcon, .contactEmailIcon{
         width: 100%;
@@ -465,13 +438,6 @@ footer p{
     }
     .callIcon p, .contactEmailIcon p{
         font-size: 1rem;
-    }
-    #contactImg{
-        width: 100%;
-        border-radius: 50px 50px 0 0;
-    }
-    #contactImg img{
-        width: 100%;
     }
 
     footer p{
@@ -506,34 +472,33 @@ footer p{
     }
 
 
-
-    #contacts{
-        width: 95%;
-        justify-content: center;
-        padding: 50px 0;
-    }
     #contactText{
-        width: 100%;
-        margin-left: 0px;
-        padding-right: 0px;
+        width: 90%;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    #contactText h1{
+        font-size: 2.2rem;
+    }
+    #contactText p{
+        font-size: 0.9rem;
         text-align: center;
     }
     #contactIconBox{
-        width: 100%;
-        margin-left: 0px;
+        width: 90%;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .callIcon, .contactEmailIcon{
         width: auto;
+        justify-content: center;
     }
-    #contactImg{
-        width: 100%;
-        border-radius: 50px 50px 0 0;
+    .callIcon span, .contactEmailIcon span{
+        font-size: 2.2rem;
     }
-    #contactImg img{
-        width: 100%;
+    .callIcon p, .contactEmailIcon p{
+        font-size: 1.1rem;
     }
 
     footer p{
@@ -566,34 +531,29 @@ footer p{
     }
 
 
-
-    #contacts{
-        width: 95%;
-        justify-content: center;
-        padding: 50px 0;
-    }
     #contactText{
-        width: 100%;
-        margin-left: 0px;
-        padding-right: 0px;
+        width: 90%;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    #contactText h1{
+        font-size: 2.3rem;
+    }
+    #contactText p{
         text-align: center;
     }
     #contactIconBox{
-        width: 100%;
-        margin-left: 0px;
+        width: 75%;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .callIcon, .contactEmailIcon{
         width: auto;
+        justify-content: center;
     }
-    #contactImg{
-        width: 100%;
-        border-radius: 50px 50px 0 0;
-    }
-    #contactImg img{
-        width: 100%;
+    .callIcon span, .contactEmailIcon span{
+        font-size: 2.3rem;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -602,5 +562,9 @@ footer p{
     }
     nav ul{
         width: 50%;
+    }
+
+    .callIcon, .contactEmailIcon{
+        width: 70%;
     }
 }
