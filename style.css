@@ -77,9 +77,8 @@ nav ul li a:hover{
     justify-content: center;
 }
 
-.email,
-.phone {
-    width: 70%;
+#email span, #phone span{
+    color: white;
 }
 
 #menuIcon{
@@ -653,12 +652,10 @@ footer p{
     #logoBox{
         width: 150px;
     }
-    nav ul{
+    nav ul, #icons{
         display: none;
     }
-    #icons{
-        display: none;
-    }
+
     #menuIcon{
         display: block;
     }
@@ -749,10 +746,7 @@ footer p{
     #logoBox{
         width: 180px;
     }
-    nav ul{
-        display: none;
-    }
-    #icons{
+    nav ul, #icons{
         display: none;
     }
     #menuIcon{
@@ -838,10 +832,7 @@ footer p{
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
-    nav ul{
-        display: none;
-    }
-    #icons{
+    nav ul, #icons{
         display: none;
     }
     #menuIcon{
