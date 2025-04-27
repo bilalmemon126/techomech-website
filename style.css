@@ -593,13 +593,16 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    align-items: end;
 }
 .callIcon, .contactEmailIcon{
-    width: 60%;
+    width: auto;
     display: flex;
     align-items: center;
+    justify-content: right;
     gap: 20px;
+}
+#whatsappIcon{
+    width: 2rem;
 }
 .callIcon span, .contactEmailIcon span{
     color: white;
@@ -697,10 +700,13 @@ footer p{
         justify-content: center;
     }
     .callIcon span, .contactEmailIcon span{
-        font-size: 2rem;
+        font-size: 1.7rem;
+    }
+    #whatsappIcon{
+        width: 1.7rem;
     }
     .callIcon p, .contactEmailIcon p{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     
 
@@ -785,12 +791,16 @@ footer p{
     .callIcon, .contactEmailIcon{
         width: auto;
         justify-content: center;
+        gap: 10px;
     }
     .callIcon span, .contactEmailIcon span{
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+    }
+    #whatsappIcon{
+        width: 1.8rem;
     }
     .callIcon p, .contactEmailIcon p{
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     footer p{
@@ -859,7 +869,7 @@ footer p{
         text-align: center;
     }
     #contactIconBox{
-        width: 75%;
+        width: 90%;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -871,6 +881,9 @@ footer p{
     .callIcon span, .contactEmailIcon span{
         font-size: 2.3rem;
     }
+    #whatsappIcon{
+        width: 2.3rem;
+    }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
@@ -879,9 +892,5 @@ footer p{
     }
     nav ul{
         width: 50%;
-    }
-
-    .callIcon, .contactEmailIcon{
-        width: 70%;
     }
 }
