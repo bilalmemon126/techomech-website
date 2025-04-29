@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+html {
+    font-size: 18px;
+}
+
 #mainContainer{
     width: 100%;
     min-height: 100vh;
@@ -49,12 +54,14 @@ nav ul li a:hover{
     border-bottom: 2px solid #024C94;
 }
 #icons {
-    width: 10%;
+    width: 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+#icons a{
+    text-decoration: none;
+}
 #email,
 #phone {
     width: 35px;
@@ -360,6 +367,9 @@ nav ul li a:hover{
     justify-content: right;
     gap: 20px;
 }
+.callIcon a, .contactEmailIcon a{
+    text-decoration: none;
+}
 #whatsappIcon{
     width: 2rem;
 }
@@ -553,7 +563,7 @@ footer p{
         text-align: center;
     }
     #contactIconBox{
-        width: 75%;
+        width: 90%;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;

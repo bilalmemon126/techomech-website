@@ -27,6 +27,7 @@ header {
     position: fixed;
     z-index: 10;
     padding: 20px 0;
+    /* border: 2px solid black; */
 }
 nav{
     width: 95%;
@@ -35,9 +36,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* border: 2px solid gray; */
 }
 #logoBox{
     width: 200px;
+    /* border: 2px solid green; */
 }
 #logo{
     width: 100%;
@@ -48,6 +51,7 @@ nav ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* border: 2px solid blue; */
 }
 nav ul li a{
     text-decoration: none;
@@ -60,12 +64,15 @@ nav ul li a:hover{
     border-bottom: 2px solid #024C94;
 }
 #icons {
-    width: 10%;
+    width: 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 2px solid brown; */
 }
-
+#icons a{
+    text-decoration: none;
+}
 #email,
 #phone {
     width: 35px;
@@ -600,6 +607,9 @@ nav ul li a:hover{
     align-items: center;
     justify-content: right;
     gap: 20px;
+}
+.callIcon a, .contactEmailIcon a{
+    text-decoration: none;
 }
 #whatsappIcon{
     width: 2rem;
